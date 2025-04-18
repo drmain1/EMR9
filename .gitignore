@@ -1,14 +1,24 @@
-# Node.js
+# Node.js / General
 node_modules/
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+pnpm-debug.log*
+lerna-debug.log*
+package-lock.json # Usually committed, but added here based on previous local .gitignore
 pnpm-lock.yaml
 
 # Vue / Build artifacts
 dist/
+dist-ssr/
+coverage/
 *.local
+
+# Cypress
+/cypress/videos/
+/cypress/screenshots/
 
 # Terraform
 .terraform/
@@ -23,7 +33,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# ZIP files (adjust if any specific zips NEED to be tracked)
+# ZIP files (Can be removed if specific zips NEED to be tracked)
 *.zip
 
 # macOS
@@ -50,20 +60,27 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# VSCode
+# Editor directories and files
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-
-# Optional: Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lcov.info
-*.sln
+.idea/
 *.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript
+*.tsbuildinfo
+
+# Amplify
+.amplify/
+amplify_outputs*
+amplifyconfiguration*
+
+# Optional LCOV data
+lcov.info
